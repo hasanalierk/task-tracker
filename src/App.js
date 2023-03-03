@@ -8,25 +8,25 @@ import { useEffect, useState } from "react";
 function App() {
   const [appTaskData, setAppTaskData] = useState(data)
 
-  // const getLocal = () =>{
-  //   const appTaskDataGetItemLocal = localStorage.getItem("appTaskDataLocal")
-  //  setAppTaskData(JSON.parse(appTaskDataGetItemLocal))
-  //  console.log(appTaskDataGetItemLocal)
-  // }
+  const getLocal = () =>{
+    const appTaskDataGetItemLocal = localStorage.getItem("appTaskDataLocal")
+   setAppTaskData(JSON.parse(appTaskDataGetItemLocal))
+   console.log(appTaskDataGetItemLocal)
+  }
 
-  // const setLocal = () =>{
-  //   localStorage.setItem("appTaskDataLocal",JSON.stringify(appTaskData))
-  // }
+  const setLocal = () =>{
+    localStorage.setItem("appTaskDataLocal",JSON.stringify(appTaskData))
+  }
 
-  // useEffect(() => {
-  //   setLocal()
+  useEffect(() => {
+    setLocal()
     
-  // },[appTaskData])
+  },[appTaskData])
 
-  // useEffect(() => {
-  // getLocal()
+  useEffect(() => {
+  getLocal()
   
-  // }, [])
+  }, [])
   
   
   

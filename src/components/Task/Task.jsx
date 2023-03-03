@@ -1,7 +1,7 @@
 
 import "./Task.css"
 import { MdDeleteForever } from "react-icons/md"
-import { useState } from "react"
+
 const Task = ({appTaskData, setAppTaskData, setLocal}) => {
    console.log(appTaskData)
 
