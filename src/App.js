@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from "./components/Header/Header";
+import "./App.css"
+import Task from "./components/Task/Task";
+import { data } from "./helper/data";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [appTaskData, setAppTaskData] = useState(data)
+
+  // const getLocal = () =>{
+  //   const appTaskDataGetItemLocal = localStorage.getItem("appTaskDataLocal")
+  //  setAppTaskData(JSON.parse(appTaskDataGetItemLocal))
+  //  console.log(appTaskDataGetItemLocal)
+  // }
+
+  // const setLocal = () =>{
+  //   localStorage.setItem("appTaskDataLocal",JSON.stringify(appTaskData))
+  // }
+
+  // useEffect(() => {
+  //   setLocal()
+    
+  // },[appTaskData])
+
+  // useEffect(() => {
+  // getLocal()
+  
+  // }, [])
+  
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header appTaskData={appTaskData} setAppTaskData={setAppTaskData} />
+      <Task appTaskData={appTaskData} setAppTaskData={setAppTaskData}  />
+      
     </div>
   );
 }
 
 export default App;
+
+
+// en son tıklananın üstünü çizme mevzusunda kaldım bir hata alıyodum ordan devame edersin
+

@@ -1,0 +1,14 @@
+ input{
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 15px;
+ }
+
+ .save-button{
+    width: 60%;
+    background-color: rgb(155, 236, 23);
+    color: black;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    border: none;
+ }

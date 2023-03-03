@@ -1,0 +1,33 @@
+.map-div{
+    width: 100%;
+    background-color: gray;
+    /* margin: auto; */
+    position: relative;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.task-container-div{
+    background-color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.delete-icon{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+.through{
+    text-decoration: line-through;
+}
+
+h3{
+    font-size: 1.1rem;
+}
