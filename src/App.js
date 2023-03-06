@@ -6,7 +6,7 @@ import { data } from "./helper/data";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [appTaskData, setAppTaskData] = useState(data)
+  const [appTaskData, setAppTaskData] = useState(JSON.parse(localStorage.getItem("appTaskDataLocal")) || data)
 
   const getLocal = () =>{
     const appTaskDataGetItemLocal = localStorage.getItem("appTaskDataLocal")
@@ -18,15 +18,18 @@ function App() {
     localStorage.setItem("appTaskDataLocal",JSON.stringify(appTaskData))
   }
 
+
+
+  // useEffect(() => {
+  // getLocal()
+  
+  // }, [])
+
+  
   useEffect(() => {
     setLocal()
     
   },[appTaskData])
-
-  useEffect(() => {
-  getLocal()
-  
-  }, [])
   
   
   
